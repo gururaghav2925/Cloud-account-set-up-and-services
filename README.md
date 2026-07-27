@@ -1,7 +1,7 @@
-Accessing the AWS Management Console
+## Accessing the AWS Management Console
 At the top of these instructions, choose  Start Lab.
 
-The lab session starts.
+## The lab session starts.
 
 A timer displays at the top of the page and shows the time remaining in the session.
 
@@ -19,7 +19,7 @@ A new browser tab opens and connects you to the console.
 
  
 
-Arrange the AWS Management Console tab so that it displays along side these instructions. Ideally, you will be able to see both browser tabs at the same time, to make it easier to follow the lab steps.
+## Arrange the AWS Management Console tab so that it displays along side these instructions. Ideally, you will be able to see both browser tabs at the same time, to make it easier to follow the lab steps.
 
  
 
@@ -30,7 +30,7 @@ At the end of this lab you will be instructed to submit the lab to receive a sco
 
  
 
-Task 1: Explore the Users and Groups
+## Task 1: Explore the Users and Groups
 In this task, you will explore the Users and Groups that have already been created for you in IAM.
 
  
@@ -73,17 +73,18 @@ user-1 is assigned a Console password.
 
  
 
-In the navigation pane on the left, choose User groups.
+## In the navigation pane on the left, choose User groups.
 
    The following groups have already been created for you:
 
+```
 EC2-Admin
 
 EC2-Support
 
 S3-Support
 
-  
+```  
 
 Choose the EC2-Support group link.
 
@@ -98,7 +99,7 @@ Choose the Permissions tab.
  
 
 Choose the plus (+) icon next to the AmazonEC2ReadOnlyAccess policy to view the policy details.
-
+```
 Note: A policy defines what actions are allowed or denied for specific AWS resources. 
 
 This policy is granting permission to List and Describe information about EC2, Elastic Load Balancing, CloudWatch and Auto Scaling. This ability to view resources, but not modify them, is ideal for assigning to a Support role.
@@ -111,7 +112,7 @@ Action specifies the API calls that can be made against an AWS Service (eg cloud
 
 Resource defines the scope of entities covered by the policy rule (eg a specific Amazon S3 bucket or Amazon EC2 instance, or * which means any resource).
 
- 
+ ```
 
 Choose the minus icon (-) to hide the policy details.
 
@@ -121,7 +122,7 @@ In the navigation pane on the left, choose User groups.
 
  
 
-Choose the S3-Support group link and then choose the Permissions tab.
+## Choose the S3-Support group link and then choose the Permissions tab.
 
  The S3-Support group has the AmazonS3ReadOnlyAccess policy attached.
 
@@ -141,7 +142,7 @@ In the navigation pane on the left, choose User groups.
 
  
 
-Choose the EC2-Admin group link and then choose the Permissions tab. 
+## Choose the EC2-Admin group link and then choose the Permissions tab. 
 
  This Group is slightly different from the other two. Instead of a Managed Policy, it has an Inline Policy, which is a policy assigned to just one User or Group. Inline Policies are typically used to apply permissions for one-off situations.
 
@@ -157,10 +158,10 @@ Choose the minus icon (-) to hide the policy details.
 
  
 
-Business Scenario
+## Business Scenario
 For the remainder of this lab, you will work with these Users and Groups to enable permissions supporting the following business scenario:
 
-Your company is growing its use of Amazon Web Services, and is using many Amazon EC2 instances and a great deal of Amazon S3 storage. You wish to give access to new staff depending upon their job function:
+## Your company is growing its use of Amazon Web Services, and is using many Amazon EC2 instances and a great deal of Amazon S3 storage. You wish to give access to new staff depending upon their job function:
 
 User	In Group	Permissions
 user-1	S3-Support	Read-Only access to Amazon S3
@@ -168,7 +169,7 @@ user-2	EC2-Support	Read-Only access to Amazon EC2
 user-3	EC2-Admin	View, Start and Stop Amazon EC2 instances
 |
 
-Task 2: Add Users to Groups
+## Task 2: Add Users to Groups
 You have recently hired user-1 into a role where they will provide support for Amazon S3. You will add them to the S3-Support group so that they inherit the necessary permissions via the attached AmazonS3ReadOnlyAccess policy.
 
  You can ignore any "not authorized" errors that appear during this task. They are caused by your lab account having limited permissions and will not impact your ability to complete the lab.
@@ -232,7 +233,7 @@ If you do not have a 1 beside each group, revisit the above instructions above t
 
  
 
-Task 3: Sign-In and Test Users
+## Task 3: Sign-In and Test Users
 In this task, you will test the permissions of each IAM User.
 
  
@@ -456,7 +457,7 @@ To find detailed feedback about your work, choose Submission Report.
 
  
 
-Lab complete 
+## Lab complete 
 Congratulations! You have completed the lab.
 
  
@@ -464,3 +465,9 @@ Congratulations! You have completed the lab.
 Choose  End Lab at the top of this page, and then select Yes to confirm that you want to end the lab.
 
 A panel indicates that You may close this message box now...
+
+## OUTPUT:
+<img width="1532" height="578" alt="lab-1report" src="https://github.com/user-attachments/assets/2e647045-d50c-4d02-a0c8-603bf218fc40" />
+
+<img width="1917" height="980" alt="lab1-grade" src="https://github.com/user-attachments/assets/29b4dc94-7f6f-443f-bc92-827627347c39" />
+
